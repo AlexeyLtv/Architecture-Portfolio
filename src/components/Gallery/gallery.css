@@ -1,0 +1,119 @@
+.gallery{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+
+    a{
+        color: white;
+    }
+
+    .slides{
+        flex-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 55vh;
+        gap: 30px;
+        margin-left: 50px;
+        overflow-x: auto;
+
+        @media (max-width: 600px){
+            width: 100vw;
+            margin-left: 0vw;
+            gap: 0;
+        }
+
+        .item{
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 20%;
+            justify-content: space-between;
+            cursor: pointer;
+            z-index: 5;
+            transition: transform 0.2s;
+
+            &:hover{
+                transform: scale(1.01);
+            }
+
+            @media (max-width: 600px){
+                width: 60vw;
+                height: 100vw;
+                margin-left: 5vw;
+
+                &:hover{
+                    transform: scale(1.0);
+                }
+            }
+
+            .img{
+                width: 100%;
+                height: 85%;
+                background-color: red;
+                overflow: hidden;
+
+                .picture{
+                    
+                    background-size: cover;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .desc{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                h2{
+                    font-weight: 400;
+                    font-size: 24px;
+
+                    @media (max-width: 600px){
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .title{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 9vh;
+        margin-bottom: 5vh;
+
+        @media (max-width: 600px){
+            width: 80vw;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        
+        h1{
+            font-weight: 400;
+            margin-right: 3vw;
+            margin-left: 3vw;
+            font-family: "Lato";
+
+            @media (max-width: 600px){
+                font-size: 6vh;
+            }
+        }
+    }
+}

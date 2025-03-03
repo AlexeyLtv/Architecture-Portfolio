@@ -1,0 +1,152 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    background-color: white;
+    scroll-snap-align: center;
+
+    @media (max-width: 600px){
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    .content{
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 600px){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            width: 50vw;
+            margin-bottom: 25vh;
+
+            @media (max-width: 600px){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 80vw;
+                height: 40vh;
+                margin-bottom: 0;
+            }
+
+            .img{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 50vh;
+                width: 27.5vw;
+
+                @media (max-width: 600px){
+                    width: 70vw;
+                    height: 15vh;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 5vh;
+                    margin-top: 5vh;
+                }
+            }
+
+            .who{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+
+                @media (max-width: 600px){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 5vh;
+                }
+
+                h1{
+                    font-size: 16vh;
+                    font-weight: 400;
+                    font-family: "Lato";
+                    margin-left: 13vw;
+                    line-height: 0.8;
+
+                    @media (max-width: 600px){
+                        font-size: 6vh;
+                        margin-left: 0;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 70vh;
+            width: 50vw;
+            margin-bottom: 25vh;
+            overflow: hidden;
+
+            @media (max-width: 600px){
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                width: 80vw;
+                height: 50vh;
+                margin-bottom: 0;
+            }
+
+            p{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-size: 5vh;
+                margin-top: 5vh;
+                font-weight: 400;
+                width: 90%;
+                margin-right: 3vw;
+                font-family: "Lato";
+
+                @media (max-width: 600px){
+                    font-size: 2.8vh;
+                    margin-top: 2.2vh;
+                }
+            }
+
+            .gray{
+                background: linear-gradient(rgb(165, 164, 164), rgb(193, 192, 192));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                span{
+                    background: black;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}

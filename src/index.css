@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    scrollbar-width: none;
+    font-family: "Roboto";
+    scroll-behavior: smooth;
+}
+
+.fa-square-xmark{
+    font-size: 35px;
+    margin-left: 0.8vw;
+    margin-top: 0.8vw;
+    z-index: 10;
+    transition: all 0.2s;
+    color: black;
+
+    &:hover{
+        transform: scale(1.2);
+        color: #F01704;
+    }
+
+    @media (max-width: 600px){
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 10px;
+
+        &:hover{
+            transform: scale(1.0);
+            color: black;
+        }
+    }
+}
